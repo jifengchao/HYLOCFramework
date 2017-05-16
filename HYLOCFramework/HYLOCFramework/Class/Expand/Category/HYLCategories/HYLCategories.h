@@ -9,5 +9,7 @@
 #ifndef HYLCategories_h
 #define HYLCategories_h
 
+#import "HYLFoundation.h"
+#import "HYLUIKit.h"
 
 #endif /* HYLCategories_h */

@@ -230,6 +230,10 @@
 		A9AA5E861ECAE5AF00682177 /* NSArray+HYLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E851ECAE5AF00682177 /* NSArray+HYLSafe.m */; };
 		A9AA5E891ECAE5C300682177 /* NSDictionary+HYLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E881ECAE5C300682177 /* NSDictionary+HYLSafe.m */; };
 		A9AA5E8C1ECAE5D800682177 /* NSNull+HYLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E8B1ECAE5D800682177 /* NSNull+HYLSafe.m */; };
+		A9AA5E911ECB008700682177 /* UITextView+HYLPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E901ECB008700682177 /* UITextView+HYLPlaceHolder.m */; };
+		A9AA5E951ECB03B500682177 /* UITextField+HYLLimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E941ECB03B500682177 /* UITextField+HYLLimitLength.m */; };
+		A9AA5E991ECB091B00682177 /* NSString+HYLFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E981ECB091B00682177 /* NSString+HYLFilePath.m */; };
+		A9AA5E9C1ECB09BE00682177 /* NSString+HYLTextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E9B1ECB09BE00682177 /* NSString+HYLTextSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -704,6 +708,16 @@
 		A9AA5E881ECAE5C300682177 /* NSDictionary+HYLSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYLSafe.m"; sourceTree = "<group>"; };
 		A9AA5E8A1ECAE5D800682177 /* NSNull+HYLSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+HYLSafe.h"; sourceTree = "<group>"; };
 		A9AA5E8B1ECAE5D800682177 /* NSNull+HYLSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+HYLSafe.m"; sourceTree = "<group>"; };
+		A9AA5E8D1ECAFF0000682177 /* HYLFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYLFoundation.h; sourceTree = "<group>"; };
+		A9AA5E8E1ECAFFDF00682177 /* HYLUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYLUIKit.h; sourceTree = "<group>"; };
+		A9AA5E8F1ECB008700682177 /* UITextView+HYLPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+HYLPlaceHolder.h"; sourceTree = "<group>"; };
+		A9AA5E901ECB008700682177 /* UITextView+HYLPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+HYLPlaceHolder.m"; sourceTree = "<group>"; };
+		A9AA5E931ECB03B500682177 /* UITextField+HYLLimitLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HYLLimitLength.h"; sourceTree = "<group>"; };
+		A9AA5E941ECB03B500682177 /* UITextField+HYLLimitLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HYLLimitLength.m"; sourceTree = "<group>"; };
+		A9AA5E971ECB091B00682177 /* NSString+HYLFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYLFilePath.h"; sourceTree = "<group>"; };
+		A9AA5E981ECB091B00682177 /* NSString+HYLFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLFilePath.m"; sourceTree = "<group>"; };
+		A9AA5E9A1ECB09BE00682177 /* NSString+HYLTextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYLTextSize.h"; sourceTree = "<group>"; };
+		A9AA5E9B1ECB09BE00682177 /* NSString+HYLTextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLTextSize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -825,6 +839,8 @@
 				A9AA5E821ECAE4B100682177 /* UIKit */,
 				A9AA5E7C1ECAE46200682177 /* Foundation */,
 				A9AA5E7B1ECAE36D00682177 /* HYLCategories.h */,
+				A9AA5E8D1ECAFF0000682177 /* HYLFoundation.h */,
+				A9AA5E8E1ECAFFDF00682177 /* HYLUIKit.h */,
 			);
 			path = HYLCategories;
 			sourceTree = "<group>";
@@ -1822,6 +1838,7 @@
 		A9AA5E7C1ECAE46200682177 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A9AA5E961ECB08F700682177 /* NSString */,
 				A9AA5E7D1ECAE46200682177 /* NSArray */,
 				A9AA5E7E1ECAE46200682177 /* NSDictionary */,
 				A9AA5E7F1ECAE46200682177 /* NSNull */,
@@ -1859,6 +1876,7 @@
 		A9AA5E821ECAE4B100682177 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A9AA5E921ECB039E00682177 /* UITextField */,
 				A9AA5E831ECAE4B100682177 /* UITextView */,
 			);
 			path = UIKit;
@@ -1867,8 +1885,30 @@
 		A9AA5E831ECAE4B100682177 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
+				A9AA5E8F1ECB008700682177 /* UITextView+HYLPlaceHolder.h */,
+				A9AA5E901ECB008700682177 /* UITextView+HYLPlaceHolder.m */,
 			);
 			path = UITextView;
+			sourceTree = "<group>";
+		};
+		A9AA5E921ECB039E00682177 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				A9AA5E931ECB03B500682177 /* UITextField+HYLLimitLength.h */,
+				A9AA5E941ECB03B500682177 /* UITextField+HYLLimitLength.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		A9AA5E961ECB08F700682177 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				A9AA5E971ECB091B00682177 /* NSString+HYLFilePath.h */,
+				A9AA5E981ECB091B00682177 /* NSString+HYLFilePath.m */,
+				A9AA5E9A1ECB09BE00682177 /* NSString+HYLTextSize.h */,
+				A9AA5E9B1ECB09BE00682177 /* NSString+HYLTextSize.m */,
+			);
+			path = NSString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2039,6 +2079,7 @@
 				A9AA5DE31ECAE33100682177 /* NSString+JKContains.m in Sources */,
 				A9AA5E531ECAE33100682177 /* UITableViewCell+JKDelaysContentTouches.m in Sources */,
 				A9AA5DD41ECAE33100682177 /* NSNumber+JKRound.m in Sources */,
+				A9AA5E911ECB008700682177 /* UITextView+HYLPlaceHolder.m in Sources */,
 				A9AA5E411ECAE33100682177 /* UILabel+JKAutoSize.m in Sources */,
 				A9AA5DB21ECAE33100682177 /* NSData+JKAPNSToken.m in Sources */,
 				A9AA5DAB1ECAE33100682177 /* NSManagedObjectContext+JKFetching.m in Sources */,
@@ -2135,6 +2176,7 @@
 				A9AA5E2A1ECAE33100682177 /* UIImage+JKAnimatedGIF.m in Sources */,
 				A9AA5DBE1ECAE33100682177 /* NSDate+JKReporting.m in Sources */,
 				A9AA5E261ECAE33100682177 /* UIFont+JKCustomLoader.m in Sources */,
+				A9AA5E9C1ECB09BE00682177 /* NSString+HYLTextSize.m in Sources */,
 				A9AA5DF91ECAE33100682177 /* NSURLConnection+JKSelfSigned.m in Sources */,
 				A9AA5DFD1ECAE33100682177 /* NSUserDefaults+JKiCloudSync.m in Sources */,
 				A9AA5E771ECAE33100682177 /* UIWebView+JKStyle.m in Sources */,
@@ -2152,6 +2194,7 @@
 				A9AA5B161ECAA00500682177 /* ViewController.m in Sources */,
 				A9AA5DF71ECAE33100682177 /* NSURL+JKParam.m in Sources */,
 				A9AA5DD11ECAE33100682177 /* NSDecimalNumber+JKExtensions.m in Sources */,
+				A9AA5E991ECB091B00682177 /* NSString+HYLFilePath.m in Sources */,
 				A9AA5DDC1ECAE33100682177 /* NSObject+JKGCD.m in Sources */,
 				A9AA5E491ECAE33100682177 /* UINavigationItem+JKMargin.m in Sources */,
 				A9AA5DC21ECAE33100682177 /* NSDictionary+JKBlock.m in Sources */,
@@ -2205,6 +2248,7 @@
 				A9AA5E421ECAE33100682177 /* UILabel+JKSuggestSize.m in Sources */,
 				A9AA5E751ECAE33100682177 /* UIWebView+JKLoadInfo.m in Sources */,
 				A9AA5E251ECAE33100682177 /* UIDevice+JKPasscodeStatus.m in Sources */,
+				A9AA5E951ECB03B500682177 /* UITextField+HYLLimitLength.m in Sources */,
 				A9AA5E111ECAE33100682177 /* UIBezierPath+JKSymbol.m in Sources */,
 				A9AA5E231ECAE33100682177 /* UIControl+JKSound.m in Sources */,
 				A9AA5DAA1ECAE33100682177 /* NSManagedObjectContext+JKExtensions.m in Sources */,
