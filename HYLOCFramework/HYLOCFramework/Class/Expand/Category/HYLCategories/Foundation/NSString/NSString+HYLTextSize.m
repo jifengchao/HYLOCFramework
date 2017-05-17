@@ -10,7 +10,7 @@
 
 @implementation NSString (HYLTextSize)
 
-- (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
+- (CGSize)hyl_sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
 {
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = font;
@@ -19,7 +19,7 @@
     return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
 }
 
-- (CGSize)sizeWithFont:(UIFont *)font maxH:(CGFloat)maxH
+- (CGSize)hyl_sizeWithFont:(UIFont *)font maxH:(CGFloat)maxH
 {
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = font;
@@ -28,9 +28,9 @@
     return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
 }
 
-- (CGSize)sizeWithFont:(UIFont *)font
+- (CGSize)hyl_sizeWithFont:(UIFont *)font
 {
-    return [self sizeWithFont:font maxW:MAXFLOAT];
+    return [self hyl_sizeWithFont:font maxW:MAXFLOAT];
 }
 
 /**
@@ -41,7 +41,7 @@
  *
  *  @return 快速计算出文本的真实尺寸
  */
-- (CGSize)sizeWithFont:(UIFont *)font andMaxSize:(CGSize)maxSize
+- (CGSize)hyl_sizeWithFont:(UIFont *)font andMaxSize:(CGSize)maxSize
 {
     NSDictionary *arrts = @{
                             NSFontAttributeName:font
@@ -59,9 +59,9 @@
  *
  *  @return 快速计算出文本的真实尺寸
  */
-+ (CGSize)sizeWithText:(NSString *)text andFont:(UIFont *)font andMaxSize:(CGSize)maxSize
++ (CGSize)hyl_sizeWithText:(NSString *)text andFont:(UIFont *)font andMaxSize:(CGSize)maxSize
 {
-    return [text sizeWithFont:font andMaxSize:maxSize];
+    return [text hyl_sizeWithFont:font andMaxSize:maxSize];
 }
 
 @end

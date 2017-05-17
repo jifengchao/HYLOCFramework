@@ -20,7 +20,7 @@
  *
  *  @return 快速计算出文本的真实尺寸
  */
-- (CGSize)sizeWithFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
+- (CGSize)hyl_sizeWithFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
 
 /**
  *  快速计算出文本的真实尺寸
@@ -31,12 +31,12 @@
  *
  *  @return 快速计算出文本的真实尺寸
  */
-+ (CGSize)sizeWithText:(NSString *)text andFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
++ (CGSize)hyl_sizeWithText:(NSString *)text andFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
 
-- (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW;
+- (CGSize)hyl_sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW;
 
-- (CGSize)sizeWithFont:(UIFont *)font maxH:(CGFloat)maxH;
+- (CGSize)hyl_sizeWithFont:(UIFont *)font maxH:(CGFloat)maxH;
 
-- (CGSize)sizeWithFont:(UIFont *)font;
+- (CGSize)hyl_sizeWithFont:(UIFont *)font;
 
 @end

@@ -21,7 +21,7 @@
 
 - (void)swizzledDealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    UILabel *label = objc_getAssociatedObject(self, @selector(placeholderLabel));
+    UILabel *label = objc_getAssociatedObject(self, @selector(hyl_placeholderLabel));
     if (label) {
         for (NSString *key in self.class.observingKeys) {
             @try {
@@ -37,9 +37,9 @@
 
 
 #pragma mark - Class Methods
-#pragma mark `defaultPlaceholderColor`
+#pragma mark `hyl_defaultPlaceholderColor`
 
-+ (UIColor *)defaultPlaceholderColor {
++ (UIColor *)hyl_defaultPlaceholderColor {
     static UIColor *color = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -65,20 +65,20 @@
 
 
 #pragma mark - Properties
-#pragma mark `placeholderLabel`
+#pragma mark `hyl_placeholderLabel`
 
-- (UILabel *)placeholderLabel {
-    UILabel *label = objc_getAssociatedObject(self, @selector(placeholderLabel));
+- (UILabel *)hyl_placeholderLabel {
+    UILabel *label = objc_getAssociatedObject(self, @selector(hyl_placeholderLabel));
     if (!label) {
         NSAttributedString *originalText = self.attributedText;
         self.text = @" "; // lazily set font of `UITextView`.
         self.attributedText = originalText;
         
         label = [[UILabel alloc] init];
-        label.textColor = [self.class defaultPlaceholderColor];
+        label.textColor = [self.class hyl_defaultPlaceholderColor];
         label.numberOfLines = 0;
         label.userInteractionEnabled = NO;
-        objc_setAssociatedObject(self, @selector(placeholderLabel), label, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, @selector(hyl_placeholderLabel), label, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(updatePlaceholderLabel)
@@ -95,32 +95,32 @@
 
 #pragma mark `placeholder`
 
-- (NSString *)placeholder {
-    return self.placeholderLabel.text;
+- (NSString *)hyl_placeholder {
+    return self.hyl_placeholderLabel.text;
 }
 
-- (void)setPlaceholder:(NSString *)placeholder {
-    self.placeholderLabel.text = placeholder;
+- (void)setHyl_placeholder:(NSString *)hyl_placeholder {
+    self.hyl_placeholderLabel.text = hyl_placeholder;
     [self updatePlaceholderLabel];
 }
 
-- (NSAttributedString *)attributedPlaceholder {
-    return self.placeholderLabel.attributedText;
+- (NSAttributedString *)hyl_attributedPlaceholder {
+    return self.hyl_placeholderLabel.attributedText;
 }
 
-- (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder {
-    self.placeholderLabel.attributedText = attributedPlaceholder;
+- (void)setHyl_attributedPlaceholder:(NSAttributedString *)hyl_attributedPlaceholder {
+    self.hyl_placeholderLabel.attributedText = hyl_attributedPlaceholder;
     [self updatePlaceholderLabel];
 }
 
 #pragma mark `placeholderColor`
 
-- (UIColor *)placeholderColor {
-    return self.placeholderLabel.textColor;
+- (UIColor *)hyl_placeholderColor {
+    return self.hyl_placeholderLabel.textColor;
 }
 
-- (void)setPlaceholderColor:(UIColor *)placeholderColor {
-    self.placeholderLabel.textColor = placeholderColor;
+- (void)setHyl_placeholderColor:(UIColor *)hyl_placeholderColor {
+    self.hyl_placeholderLabel.textColor = hyl_placeholderColor;
 }
 
 
@@ -138,14 +138,14 @@
 
 - (void)updatePlaceholderLabel {
     if (self.text.length) {
-        [self.placeholderLabel removeFromSuperview];
+        [self.hyl_placeholderLabel removeFromSuperview];
         return;
     }
     
-    [self insertSubview:self.placeholderLabel atIndex:0];
+    [self insertSubview:self.hyl_placeholderLabel atIndex:0];
     
-    self.placeholderLabel.font = self.font;
-    self.placeholderLabel.textAlignment = self.textAlignment;
+    self.hyl_placeholderLabel.font = self.font;
+    self.hyl_placeholderLabel.textAlignment = self.textAlignment;
     
     // `NSTextContainer` is available since iOS 7
     CGFloat lineFragmentPadding;
@@ -168,8 +168,8 @@
     CGFloat x = lineFragmentPadding + textContainerInset.left;
     CGFloat y = textContainerInset.top;
     CGFloat width = CGRectGetWidth(self.bounds) - x - lineFragmentPadding - textContainerInset.right;
-    CGFloat height = [self.placeholderLabel sizeThatFits:CGSizeMake(width, 0)].height;
-    self.placeholderLabel.frame = CGRectMake(x, y, width, height);
+    CGFloat height = [self.hyl_placeholderLabel sizeThatFits:CGSizeMake(width, 0)].height;
+    self.hyl_placeholderLabel.frame = CGRectMake(x, y, width, height);
 }
 
 @end

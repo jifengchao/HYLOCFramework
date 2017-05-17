@@ -18,11 +18,11 @@ typedef void(^HYLEditEndBlock)(NSString *text);
  *  length
  *  block
  */
-- (void)limitTextLength:(int)length block:(HYLEditEndBlock)block;
+- (void)hyl_limitTextLength:(int)length block:(HYLEditEndBlock)block;
 
 /**
  *  uitextField 抖动效果
  */
-- (void)shake;
+- (void)hyl_shake;
 
 @end

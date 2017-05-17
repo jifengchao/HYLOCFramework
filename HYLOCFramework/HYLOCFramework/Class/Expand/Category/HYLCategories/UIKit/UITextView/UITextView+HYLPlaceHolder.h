@@ -10,12 +10,12 @@
 
 @interface UITextView (HYLPlaceHolder)
 
-@property (nonatomic, readonly) UILabel *placeholderLabel;
+@property (nonatomic, readonly) UILabel *hyl_placeholderLabel;
 
-@property (nonatomic, strong) NSString *placeholder;
-@property (nonatomic, strong) NSAttributedString *attributedPlaceholder;
-@property (nonatomic, strong) UIColor *placeholderColor;
+@property (nonatomic, strong) NSString *hyl_placeholder;
+@property (nonatomic, strong) NSAttributedString *hyl_attributedPlaceholder;
+@property (nonatomic, strong) UIColor *hyl_placeholderColor;
 
-+ (UIColor *)defaultPlaceholderColor;
++ (UIColor *)hyl_defaultPlaceholderColor;
 
 @end

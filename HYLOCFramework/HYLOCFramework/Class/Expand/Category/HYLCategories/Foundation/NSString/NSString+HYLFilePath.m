@@ -15,7 +15,7 @@
  *
  *  @return Documents文件的路径
  */
-+ (NSString *)pathForDocuments
++ (NSString *)hyl_pathForDocuments
 {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
@@ -27,9 +27,9 @@
  *
  *  @return 快速返回Documents文件中某个子文件的路径
  */
-+ (NSString *)filePathAtDocumentsWithFileName:(NSString *)fileName
++ (NSString *)hyl_filePathAtDocumentsWithFileName:(NSString *)fileName
 {
-    return  [[self pathForDocuments] stringByAppendingPathComponent:fileName];
+    return  [[self hyl_pathForDocuments] stringByAppendingPathComponent:fileName];
 }
 
 /**
@@ -37,14 +37,14 @@
  *
  *  @return 快速返回沙盒中Library下Caches文件的路径
  */
-+ (NSString *)pathForCaches
++ (NSString *)hyl_pathForCaches
 {
     return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
 }
 
-+ (NSString *)filePathAtCachesWithFileName:(NSString *)fileName
++ (NSString *)hyl_filePathAtCachesWithFileName:(NSString *)fileName
 {
-    return [[self pathForCaches] stringByAppendingPathComponent:fileName];
+    return [[self hyl_pathForCaches] stringByAppendingPathComponent:fileName];
 }
 
 /**
@@ -52,7 +52,7 @@
  *
  *  @return 快速返回MainBundle(资源捆绑包的)的路径
  */
-+ (NSString *)pathForMainBundle
++ (NSString *)hyl_pathForMainBundle
 {
     return [NSBundle mainBundle].bundlePath;
 }
@@ -64,9 +64,9 @@
  *
  *  @return 快速返回MainBundle(资源捆绑包的)下文件的路径
  */
-+ (NSString *)filePathAtMainBundleWithFileName:(NSString *)fileName
++ (NSString *)hyl_filePathAtMainBundleWithFileName:(NSString *)fileName
 {
-    return [[self pathForMainBundle] stringByAppendingPathComponent:fileName];
+    return [[self hyl_pathForMainBundle] stringByAppendingPathComponent:fileName];
 }
 
 /**
@@ -74,7 +74,7 @@
  *
  *  @return 快速返回沙盒中tmp文件的路径
  */
-+ (NSString *)pathForTemp
++ (NSString *)hyl_pathForTemp
 {
     return NSTemporaryDirectory();
 }
@@ -86,9 +86,9 @@
  *
  *  @return 快速返回temp文件中某个子文件的路径
  */
-+ (NSString *)filePathAtTempWithFileName:(NSString *)fileName
++ (NSString *)hyl_filePathAtTempWithFileName:(NSString *)fileName
 {
-    return [[self pathForTemp] stringByAppendingPathComponent:fileName];
+    return [[self hyl_pathForTemp] stringByAppendingPathComponent:fileName];
 }
 
 /**
@@ -96,7 +96,7 @@
  *
  *  @return 快速返回沙盒中Library下Caches文件的路径
  */
-+ (NSString *)pathForPreferences
++ (NSString *)hyl_pathForPreferences
 {
     return [NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, YES) lastObject];
 }
@@ -108,9 +108,9 @@
  *
  *  @return 快速返回Preferences文件中某个子文件的路径
  */
-+ (NSString *)filePathAtPreferencesWithFileName:(NSString *)fileName
++ (NSString *)hyl_filePathAtPreferencesWithFileName:(NSString *)fileName
 {
-    return [[self pathForPreferences] stringByAppendingPathComponent:fileName];
+    return [[self hyl_pathForPreferences] stringByAppendingPathComponent:fileName];
 }
 
 /**
@@ -120,7 +120,7 @@
  *
  *  @return 快速你指定的系统文件的路径
  */
-+ (NSString *)pathForSystemFile:(NSSearchPathDirectory)directory
++ (NSString *)hyl_pathForSystemFile:(NSSearchPathDirectory)directory
 {
     return [NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES) lastObject];
 }
@@ -133,9 +133,9 @@
  *
  *  @return 快速返回沙盒中，你指定的系统文件的中某个子文件的路径
  */
-+ (NSString *)filePathForSystemFile:(NSSearchPathDirectory)directory withFileName:(NSString *)fileName
++ (NSString *)hyl_filePathForSystemFile:(NSSearchPathDirectory)directory withFileName:(NSString *)fileName
 {
-    return [[self pathForSystemFile:directory] stringByAppendingPathComponent:fileName];
+    return [[self hyl_pathForSystemFile:directory] stringByAppendingPathComponent:fileName];
 }
 
 @end

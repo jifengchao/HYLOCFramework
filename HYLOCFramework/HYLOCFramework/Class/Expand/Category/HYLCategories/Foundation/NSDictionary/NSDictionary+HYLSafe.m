@@ -13,11 +13,11 @@
 
 + (void)load {
     Method originalMethod = class_getClassMethod(self, @selector(dictionaryWithObjects:forKeys:count:));
-    Method swizzledMethod = class_getClassMethod(self, @selector(na_dictionaryWithObjects:forKeys:count:));
+    Method swizzledMethod = class_getClassMethod(self, @selector(hyl_dictionaryWithObjects:forKeys:count:));
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
-+ (instancetype)na_dictionaryWithObjects:(const id [])objects forKeys:(const id <NSCopying> [])keys count:(NSUInteger)cnt {
++ (instancetype)hyl_dictionaryWithObjects:(const id [])objects forKeys:(const id <NSCopying> [])keys count:(NSUInteger)cnt {
     id nObjects[cnt];
     id nKeys[cnt];
     int i=0, j=0;
@@ -29,7 +29,7 @@
         }
     }
     
-    return [self na_dictionaryWithObjects:nObjects forKeys:nKeys count:j];
+    return [self hyl_dictionaryWithObjects:nObjects forKeys:nKeys count:j];
 }
 
 @end
@@ -39,14 +39,14 @@
 + (void)load {
     Class dictCls = NSClassFromString(@"__NSDictionaryM");
     Method originalMethod = class_getInstanceMethod(dictCls, @selector(setObject:forKey:));
-    Method swizzledMethod = class_getInstanceMethod(dictCls, @selector(na_setObject:forKey:));
+    Method swizzledMethod = class_getInstanceMethod(dictCls, @selector(hyl_setObject:forKey:));
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
-- (void)na_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
+- (void)hyl_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
     if (!anObject)
         return;
-    [self na_setObject:anObject forKey:aKey];
+    [self hyl_setObject:anObject forKey:aKey];
 }
 
 @end

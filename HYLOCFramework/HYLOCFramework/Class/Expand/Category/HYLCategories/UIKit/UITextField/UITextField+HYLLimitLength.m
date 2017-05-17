@@ -14,7 +14,7 @@
 static NSString *kLimitTextLengthKey = @"kLimitTextLengthKey";
 static NSString *kEditEndBlockKey = @"kEditEndBlockKey";
 
-- (void)limitTextLength:(int)length block:(HYLEditEndBlock)block {
+- (void)hyl_limitTextLength:(int)length block:(HYLEditEndBlock)block {
     objc_setAssociatedObject(self, (__bridge const void *)(kLimitTextLengthKey), [NSNumber numberWithInt:length], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     if (block) {
@@ -76,7 +76,7 @@ static NSString *kEditEndBlockKey = @"kEditEndBlockKey";
     }
 }
 
-- (void)shake
+- (void)hyl_shake
 {
     CAKeyframeAnimation *keyAn = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     [keyAn setDuration:0.5f];

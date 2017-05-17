@@ -10,12 +10,12 @@
 
 @interface NSString (HYLJsonString)
 
-+ (NSString *)jsonStringWithDictionary:(NSDictionary *)dictionary;
++ (NSString *)hyl_jsonStringWithDictionary:(NSDictionary *)dictionary;
 
-+ (NSString *)jsonStringWithArray:(NSArray *)array;
++ (NSString *)hyl_jsonStringWithArray:(NSArray *)array;
 
-+ (NSString *)jsonStringWithString:(NSString *)string;
++ (NSString *)hyl_jsonStringWithString:(NSString *)string;
 
-+ (NSString *)jsonStringWithObject:(id)object;
++ (NSString *)hyl_jsonStringWithObject:(id)object;
 
 @end

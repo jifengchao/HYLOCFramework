@@ -10,7 +10,7 @@
 
 @implementation UIImage (HYLScaleImage)
 
-+ (UIImage *)scaleImage:(UIImage *)image toKb:(NSInteger)kb {
++ (UIImage *)hyl_scaleImage:(UIImage *)image toKb:(NSInteger)kb {
     
     if (!image) {
         return image;

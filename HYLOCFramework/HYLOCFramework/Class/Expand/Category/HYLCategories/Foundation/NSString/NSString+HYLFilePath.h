@@ -16,7 +16,7 @@
  *
  *  @return Documents文件的路径
  */
-+ (NSString *)pathForDocuments;
++ (NSString *)hyl_pathForDocuments;
 /**
  *  快速返回沙盒中，Documents文件中某个子文件的路径
  *
@@ -24,13 +24,13 @@
  *
  *  @return 快速返回Documents文件中某个子文件的路径
  */
-+ (NSString *)filePathAtDocumentsWithFileName:(NSString *)fileName;
++ (NSString *)hyl_filePathAtDocumentsWithFileName:(NSString *)fileName;
 /**
  *  快速返回沙盒中，Library下Caches文件的路径
  *
  *  @return 快速返回沙盒中Library下Caches文件的路径
  */
-+ (NSString *)pathForCaches;
++ (NSString *)hyl_pathForCaches;
 
 /**
  *  快速返回沙盒中，Library下Caches文件中某个子文件的路径
@@ -39,14 +39,14 @@
  *
  *  @return 快速返回Caches文件中某个子文件的路径
  */
-+ (NSString *)filePathAtCachesWithFileName:(NSString *)fileName;
++ (NSString *)hyl_filePathAtCachesWithFileName:(NSString *)fileName;
 
 /**
  *  快速返回沙盒中，MainBundle(资源捆绑包的)的路径
  *
  *  @return 快速返回MainBundle(资源捆绑包的)的路径
  */
-+ (NSString *)pathForMainBundle;
++ (NSString *)hyl_pathForMainBundle;
 
 /**
  *  快速返回沙盒中，MainBundle(资源捆绑包的)中某个子文件的路径
@@ -55,14 +55,14 @@
  *
  *  @return 快速返回MainBundle(资源捆绑包的)中某个子文件的路径
  */
-+ (NSString *)filePathAtMainBundleWithFileName:(NSString *)fileName;
++ (NSString *)hyl_filePathAtMainBundleWithFileName:(NSString *)fileName;
 
 /**
  *  快速返回沙盒中，tmp(临时文件)文件的路径
  *
  *  @return 快速返回沙盒中tmp文件的路径
  */
-+ (NSString *)pathForTemp;
++ (NSString *)hyl_pathForTemp;
 
 /**
  *  快速返回沙盒中，temp文件中某个子文件的路径
@@ -71,14 +71,14 @@
  *
  *  @return 快速返回temp文件中某个子文件的路径
  */
-+ (NSString *)filePathAtTempWithFileName:(NSString *)fileName;
++ (NSString *)hyl_filePathAtTempWithFileName:(NSString *)fileName;
 
 /**
  *  快速返回沙盒中，Library下Preferences文件的路径
  *
  *  @return 快速返回沙盒中Library下Caches文件的路径
  */
-+ (NSString *)pathForPreferences;
++ (NSString *)hyl_pathForPreferences;
 
 /**
  *  快速返回沙盒中，Library下Preferences文件中某个子文件的路径
@@ -87,7 +87,7 @@
  *
  *  @return 快速返回Preferences文件中某个子文件的路径
  */
-+ (NSString *)filePathAtPreferencesWithFileName:(NSString *)fileName;
++ (NSString *)hyl_filePathAtPreferencesWithFileName:(NSString *)fileName;
 
 /**
  *  快速返回沙盒中，你指定的系统文件的路径。tmp文件除外，tmp用系统的NSTemporaryDirectory()函数更加便捷
@@ -96,7 +96,7 @@
  *
  *  @return 快速你指定的系统文件的路径
  */
-+ (NSString *)pathForSystemFile:(NSSearchPathDirectory)directory;
++ (NSString *)hyl_pathForSystemFile:(NSSearchPathDirectory)directory;
 
 /**
  *  快速返回沙盒中，你指定的系统文件的中某个子文件的路径。tmp文件除外，请使用filePathAtTempWithFileName
@@ -106,6 +106,6 @@
  *
  *  @return 快速返回沙盒中，你指定的系统文件的中某个子文件的路径
  */
-+ (NSString *)filePathForSystemFile:(NSSearchPathDirectory)directory withFileName:(NSString *)fileName;
++ (NSString *)hyl_filePathForSystemFile:(NSSearchPathDirectory)directory withFileName:(NSString *)fileName;
 
 @end
