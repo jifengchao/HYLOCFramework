@@ -234,6 +234,11 @@
 		A9AA5E951ECB03B500682177 /* UITextField+HYLLimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E941ECB03B500682177 /* UITextField+HYLLimitLength.m */; };
 		A9AA5E991ECB091B00682177 /* NSString+HYLFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E981ECB091B00682177 /* NSString+HYLFilePath.m */; };
 		A9AA5E9C1ECB09BE00682177 /* NSString+HYLTextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AA5E9B1ECB09BE00682177 /* NSString+HYLTextSize.m */; };
+		A9AED1381ECBE1E2003284B1 /* NSString+HYLJsonString.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AED1371ECBE1E2003284B1 /* NSString+HYLJsonString.m */; };
+		A9AED13C1ECBE3B1003284B1 /* UIImage+HYLScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AED13B1ECBE3B1003284B1 /* UIImage+HYLScaleImage.m */; };
+		A9AED1401ECBE87A003284B1 /* UIColor+HYLHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AED13F1ECBE87A003284B1 /* UIColor+HYLHEX.m */; };
+		A9AED1431ECBE9E4003284B1 /* NSString+HYLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AED1421ECBE9E4003284B1 /* NSString+HYLColor.m */; };
+		A9AED1461ECBEB91003284B1 /* NSString+HYLRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AED1451ECBEB91003284B1 /* NSString+HYLRegex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -718,6 +723,16 @@
 		A9AA5E981ECB091B00682177 /* NSString+HYLFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLFilePath.m"; sourceTree = "<group>"; };
 		A9AA5E9A1ECB09BE00682177 /* NSString+HYLTextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYLTextSize.h"; sourceTree = "<group>"; };
 		A9AA5E9B1ECB09BE00682177 /* NSString+HYLTextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLTextSize.m"; sourceTree = "<group>"; };
+		A9AED1361ECBE1E2003284B1 /* NSString+HYLJsonString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYLJsonString.h"; sourceTree = "<group>"; };
+		A9AED1371ECBE1E2003284B1 /* NSString+HYLJsonString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLJsonString.m"; sourceTree = "<group>"; };
+		A9AED13A1ECBE3B1003284B1 /* UIImage+HYLScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HYLScaleImage.h"; sourceTree = "<group>"; };
+		A9AED13B1ECBE3B1003284B1 /* UIImage+HYLScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HYLScaleImage.m"; sourceTree = "<group>"; };
+		A9AED13E1ECBE87A003284B1 /* UIColor+HYLHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HYLHEX.h"; sourceTree = "<group>"; };
+		A9AED13F1ECBE87A003284B1 /* UIColor+HYLHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HYLHEX.m"; sourceTree = "<group>"; };
+		A9AED1411ECBE9E4003284B1 /* NSString+HYLColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYLColor.h"; sourceTree = "<group>"; };
+		A9AED1421ECBE9E4003284B1 /* NSString+HYLColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLColor.m"; sourceTree = "<group>"; };
+		A9AED1441ECBEB91003284B1 /* NSString+HYLRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYLRegex.h"; sourceTree = "<group>"; };
+		A9AED1451ECBEB91003284B1 /* NSString+HYLRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYLRegex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1876,6 +1891,8 @@
 		A9AA5E821ECAE4B100682177 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A9AED13D1ECBE82F003284B1 /* UIColor */,
+				A9AED1391ECBE3B1003284B1 /* UIImage */,
 				A9AA5E921ECB039E00682177 /* UITextField */,
 				A9AA5E831ECAE4B100682177 /* UITextView */,
 			);
@@ -1907,8 +1924,32 @@
 				A9AA5E981ECB091B00682177 /* NSString+HYLFilePath.m */,
 				A9AA5E9A1ECB09BE00682177 /* NSString+HYLTextSize.h */,
 				A9AA5E9B1ECB09BE00682177 /* NSString+HYLTextSize.m */,
+				A9AED1361ECBE1E2003284B1 /* NSString+HYLJsonString.h */,
+				A9AED1371ECBE1E2003284B1 /* NSString+HYLJsonString.m */,
+				A9AED1411ECBE9E4003284B1 /* NSString+HYLColor.h */,
+				A9AED1421ECBE9E4003284B1 /* NSString+HYLColor.m */,
+				A9AED1441ECBEB91003284B1 /* NSString+HYLRegex.h */,
+				A9AED1451ECBEB91003284B1 /* NSString+HYLRegex.m */,
 			);
 			path = NSString;
+			sourceTree = "<group>";
+		};
+		A9AED1391ECBE3B1003284B1 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				A9AED13A1ECBE3B1003284B1 /* UIImage+HYLScaleImage.h */,
+				A9AED13B1ECBE3B1003284B1 /* UIImage+HYLScaleImage.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		A9AED13D1ECBE82F003284B1 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				A9AED13E1ECBE87A003284B1 /* UIColor+HYLHEX.h */,
+				A9AED13F1ECBE87A003284B1 /* UIColor+HYLHEX.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2069,6 +2110,7 @@
 				A9AA5DE61ECAE33100682177 /* NSString+JKEncrypt.m in Sources */,
 				A9AA5E501ECAE33100682177 /* UISearchBar+JKBlocks.m in Sources */,
 				A9AA5DF21ECAE33100682177 /* NSString+JKURLEncode.m in Sources */,
+				A9AED13C1ECBE3B1003284B1 /* UIImage+HYLScaleImage.m in Sources */,
 				A9AA5DDA1ECAE33100682177 /* NSObject+JKBlockTimer.m in Sources */,
 				A9AA5E2B1ECAE33100682177 /* UIImage+JKBetterFace.m in Sources */,
 				A9AA5DAE1ECAE33100682177 /* CLLocation+JKCH1903.m in Sources */,
@@ -2110,6 +2152,7 @@
 				A9AA5E011ECAE33100682177 /* MKMapView+JKZoomLevel.m in Sources */,
 				A9AA5DCB1ECAE33100682177 /* NSHTTPCookieStorage+JKFreezeDry.m in Sources */,
 				A9AA5DBF1ECAE33100682177 /* NSDate+JKUtilities.m in Sources */,
+				A9AED1461ECBEB91003284B1 /* NSString+HYLRegex.m in Sources */,
 				A9AA5E451ECAE33100682177 /* UINavigationController+JKStackManager.m in Sources */,
 				A9AA5E041ECAE33100682177 /* CAMediaTimingFunction+JKAdditionalEquations.m in Sources */,
 				A9AA5E691ECAE33100682177 /* UIView+JKToast.m in Sources */,
@@ -2121,6 +2164,7 @@
 				A9AA5E181ECAE33100682177 /* UIButton+JKIndicator.m in Sources */,
 				A9AA5E651ECAE33100682177 /* UIView+JKNib.m in Sources */,
 				A9AA5DFA1ECAE33100682177 /* NSMutableURLRequest+JKUpload.m in Sources */,
+				A9AED1431ECBE9E4003284B1 /* NSString+HYLColor.m in Sources */,
 				A9AA5E5B1ECAE33100682177 /* UITextView+JKPinchZoom.m in Sources */,
 				A9AA5E061ECAE33100682177 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				A9AA5DC11ECAE33100682177 /* NSDateFormatter+JKMake.m in Sources */,
@@ -2162,6 +2206,7 @@
 				A9AA5DE71ECAE33100682177 /* NSString+JKHash.m in Sources */,
 				A9AA5DD81ECAE33100682177 /* NSObject+JKAutoCoding.m in Sources */,
 				A9AA5E681ECAE33100682177 /* UIView+JKShake.m in Sources */,
+				A9AED1401ECBE87A003284B1 /* UIColor+HYLHEX.m in Sources */,
 				A9AA5E401ECAE33100682177 /* UILabel+JKAutomaticWriting.m in Sources */,
 				A9AA5DCE1ECAE33100682177 /* NSInvocation+JKBlock.m in Sources */,
 				A9AA5E891ECAE5C300682177 /* NSDictionary+HYLSafe.m in Sources */,
@@ -2221,6 +2266,7 @@
 				A9AA5E201ECAE33100682177 /* UIColor+JKWeb.m in Sources */,
 				A9AA5E021ECAE33100682177 /* CAAnimation+JKEasingEquations.m in Sources */,
 				A9AA5E641ECAE33100682177 /* UIView+JKFrame.m in Sources */,
+				A9AED1381ECBE1E2003284B1 /* NSString+HYLJsonString.m in Sources */,
 				A9AA5DB81ECAE33100682177 /* NSData+JKPCM.m in Sources */,
 				A9AA5E191ECAE33100682177 /* UIButton+JKMiddleAligning.m in Sources */,
 				A9AA5E791ECAE33100682177 /* UIWebView+JKWebStorage.m in Sources */,

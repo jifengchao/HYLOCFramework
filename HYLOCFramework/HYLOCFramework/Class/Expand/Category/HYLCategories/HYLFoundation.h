@@ -13,4 +13,10 @@
 #import "NSDictionary+HYLSafe.h"
 #import "NSNull+HYLSafe.h"
 
+#import "NSString+HYLFilePath.h"
+#import "NSString+HYLTextSize.h"
+#import "NSString+HYLJsonString.h"
+#import "NSString+HYLColor.h"
+#import "NSString+HYLRegex.h"
+
 #endif /* HYLFoundation_h */
