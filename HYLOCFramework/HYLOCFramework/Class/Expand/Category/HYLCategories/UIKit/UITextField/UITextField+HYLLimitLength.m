@@ -13,6 +13,7 @@
 
 static NSString *kLimitTextLengthKey = @"kLimitTextLengthKey";
 static NSString *kEditEndBlockKey = @"kEditEndBlockKey";
+static NSString *kOverMaxLengthBlockKey = @"kOverMaxLengthBlockKey";
 
 - (void)hyl_limitTextLength:(int)length block:(HYLEditEndBlock)block {
     objc_setAssociatedObject(self, (__bridge const void *)(kLimitTextLengthKey), [NSNumber numberWithInt:length], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -30,6 +31,22 @@ static NSString *kEditEndBlockKey = @"kEditEndBlockKey";
     if (block) {
         block(textField.text);
     }
+}
+
+- (void)hyl_limitTextLength:(int)length block:(HYLEditEndBlock)block overblock:(HYLOverMaxLengthBlock)overblock {
+    
+    objc_setAssociatedObject(self, (__bridge const void *)(kLimitTextLengthKey), [NSNumber numberWithInt:length], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    if (block) {
+        objc_setAssociatedObject(self, (__bridge const void *)(kEditEndBlockKey), block, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    }
+    
+    if (overblock) {
+        objc_setAssociatedObject(self, (__bridge const void *)(kOverMaxLengthBlockKey), overblock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    }
+    
+    [self addTarget:self action:@selector(textFieldTextLengthLimit:) forControlEvents:UIControlEventEditingChanged];
+    [self addTarget:self action:@selector(textFieldDidEndEdit:) forControlEvents:UIControlEventEditingDidEnd];
 }
 
 - (void)textFieldTextLengthLimit:(id)sender
@@ -57,9 +74,14 @@ static NSString *kEditEndBlockKey = @"kEditEndBlockKey";
             UITextPosition *position = [self positionFromPosition:selectedRange.start offset:0];
             // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
             if (!position) {
-                if ( str.length>=length) {
+                if ( str.length >= length) {
                     NSString *strNew = [NSString stringWithString:str];
                     [self setText:[strNew substringToIndex:length]];
+                    
+                    HYLOverMaxLengthBlock overBlock = objc_getAssociatedObject(self, (__bridge const void *)(kOverMaxLengthBlockKey));
+                    if (overBlock) {
+                        overBlock();
+                    }
                 }
             }
             else
@@ -67,10 +89,15 @@ static NSString *kEditEndBlockKey = @"kEditEndBlockKey";
                 // NSLog(@"输入的");
                 
             }
-        }else{
-            if ([str length]>=length) {
+        } else {
+            if ([str length] >= length) {
                 NSString *strNew = [NSString stringWithString:str];
                 [self setText:[strNew substringToIndex:length]];
+                
+                HYLOverMaxLengthBlock overBlock = objc_getAssociatedObject(self, (__bridge const void *)(kOverMaxLengthBlockKey));
+                if (overBlock) {
+                    overBlock();
+                }
             }
         }
     }
